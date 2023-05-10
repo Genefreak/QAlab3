@@ -10,9 +10,9 @@ pipeline {
     stage('second stage'){
       steps {
         
-        sh "mv hi.sh ~/yellow"
-        sh "chmod +x /yellow/hi.sh"
-        sh "sh /yellow/hi.sh"
+        sh "mv hi.sh /var/lib/yellow"
+        sh "chmod +x /var/lib/yellow/hi.sh"
+        sh "sh /var/lib/yellow/hi.sh"
       }
     }
   }
