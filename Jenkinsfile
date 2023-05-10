@@ -4,7 +4,7 @@ pipeline {
     stage('Pipeline Stages'){
       steps {
         sh "touch hi.sh"
-        sh "echo 'echo 123' " > hi.sh
+        sh "echo 'echo 123' > hi.sh"
       }
    }
     stage('second stage'){
