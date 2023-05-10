@@ -1,18 +1,18 @@
 pipeline {
   agent any
   stages {
-    stage('Pipeline Stages'){
+    stage('Pipeline Stages') {
       steps {
         sh "touch hi.sh"
         sh "echo 'echo 123' > hi.sh"
       }
-   }
-    stage('second stage'){
+    }
+    stage('second stage') {
       steps {
-        
-        sh "mv hi.sh /var/lib/yellow"
-        sh "chmod +x /var/lib/yellow/hi.sh"
-        sh "sh /var/lib/yellow/hi.sh"
+        sh "mkdir yellow || true"
+        sh "mv hi.sh yellow/"
+        sh "chmod +x yellow/hi.sh"
+        sh "./yellow/hi.sh"
       }
     }
   }
