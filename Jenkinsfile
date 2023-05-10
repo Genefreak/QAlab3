@@ -3,14 +3,16 @@ pipeline {
   stages {
     stage('Pipeline Stages'){
       steps {
-        sh "touch hi.txt"
-        sh "echo 'echo "Hiya!!!!!!!"' " > hi.txt
+        sh "touch hi.sh"
+        sh "echo 'echo 123' " > hi.sh
       }
    }
     stage('second stage'){
       steps {
         sh "mkdir yellow"
-        sh "mv hi.txt yellow"
+        sh "mv hi.sh yellow"
+        sh "sh /yellow/hi.sh"
       }
     }
   }
+}
