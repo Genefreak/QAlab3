@@ -10,7 +10,7 @@ pipeline {
     stage('second stage'){
       steps {
         sh "mkdir yellow || true"
-        sh "mv hi.sh yellow"
+        sh "mv hi.sh ~/yellow"
         sh "chmod +x /yellow/hi.sh"
         sh "sh /yellow/hi.sh"
       }
