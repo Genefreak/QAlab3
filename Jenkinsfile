@@ -11,3 +11,6 @@ pipeline {
       steps {
         sh "mkdir yellow"
         sh "mv hi.txt yellow"
+      }
+    }
+  }
